@@ -10,9 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        label.textColor = UIColor.blue
+        label.font = UIFont.italicSystemFont(ofSize: 30)
+        label.shadowColor = UIColor.gray
+        label.shadowOffset = CGSize(width:2, height:2)
+        label.backgroundColor = UIColor.green
+        label.layer.borderColor = UIColor.black.cgColor
+        label.layer.borderWidth = 2
+        label.layer.masksToBounds = true
+        label.layer.cornerRadius = 10
     }
 
     override func didReceiveMemoryWarning() {
